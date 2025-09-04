@@ -1,0 +1,564 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #00796b; /* Teal background */
+  color: white; /* White text */
+  line-height: 1.6;
+  padding-top: 50px; /* espacio para nav fijo */
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+  padding: 2rem;
+  padding-bottom: 6.5rem; /* espacio para barra inferior */
+}
+
+/* Navigation Styles */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background-color: #004d40; /* Darker teal */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  z-index: 10000;
+}
+
+#menu-toggle {
+  font-size: 1.5rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10001;
+}
+
+.nav-title {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+#menu {
+  list-style-type: none;
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  width: 250px;
+  max-height: 375px;
+  background-color: #00796b;
+  flex-direction: column;
+  display: none;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  overflow-y: auto;
+  z-index: 10002;
+  margin: 0;
+}
+
+#menu.active {
+  display: flex;
+}
+
+#menu li {
+  margin-bottom: 6px;
+}
+
+#menu li a {
+  display: block;
+  padding: 8px 12px;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+#menu li a:hover,
+#menu li a:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  outline: none;
+}
+
+/* Contenedor general para secciones con cajita */
+.cajita {
+  background-color: #e8f5f3;
+  color: #00695c;
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+  font-family: Arial, sans-serif;
+}
+
+/* Sobre Nosotros y Valores lado a lado */
+.sobre-valores-container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.sobre-valores-container > div {
+  flex: 1 1 45%;
+  min-width: 280px;
+  background-color: #e8f5f3;
+  color: #00695c;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+}
+
+/* Títulos de secciones */
+h2 {
+  color: #004d40;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+  border-bottom: 3px solid #00796b;
+  padding-bottom: 0.3rem;
+}
+
+/* Párrafos */
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+/* Protectoras Asociadas */
+#protectoras-asociadas .protectoras-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+#protectoras-asociadas .protectoras-content p {
+  flex: 1 1 60%;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #00695c;
+  font-family: Arial, sans-serif;
+}
+
+#protectoras-asociadas .logos-protectoras {
+  flex: 1 1 35%;
+  display: flex;
+  flex-direction: row; /* horizontal */
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+#protectoras-asociadas .logos-protectoras a img {
+  max-width: 200px; /* un poco más grandes */
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+#protectoras-asociadas .logos-protectoras a img:hover {
+  transform: scale(1.05);
+}
+
+/* Eventos */
+#eventos .cajita > div {
+  margin-top: 1rem;
+}
+
+#eventos label {
+  font-weight: 600;
+  color: #004d40;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+#eventos input[type="month"] {
+  padding: 0.4rem 0.6rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #004d40;
+  background-color: white;
+  color: #004d40;
+  cursor: default;
+  user-select: none;
+}
+
+#eventos p {
+  margin-top: 0.5rem;
+  font-weight: 600;
+  color: #004d40;
+}
+
+/* Calendario personalizado */
+#calendar {
+  max-width: 350px;
+  margin: 1rem auto 0;
+  background-color: white;
+  color: #004d40;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+  user-select: none;
+}
+
+#calendar table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+#calendar th {
+  color: #00796b;
+  padding: 0.5rem 0;
+  font-weight: 700;
+  border-bottom: 2px solid #00796b;
+}
+
+#calendar td {
+  padding: 0.5rem 0;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+#calendar td:hover {
+  background-color: #a5d6a7;
+}
+
+#calendar td.evento {
+  background-color: #00796b;
+  color: white;
+  font-weight: 700;
+}
+
+/* Contacto Form */
+#contacto form {
+  background-color: #e8f5f3;
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  color: #00695c;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+}
+
+/* Ajustes para formulario contacto: dos columnas y botón debajo del textarea */
+#contacto form > div {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+#contacto form > div > div:first-child {
+  flex: 1 1 45%;
+}
+
+#contacto form > div > div:last-child {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#contacto label {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  display: inline-block;
+  color: #004d40;
+}
+
+#contacto input[type="text"],
+#contacto input[type="email"],
+#contacto input[type="tel"],
+#contacto select,
+#contacto textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  border: 1px solid #004d40;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+}
+
+#contacto textarea {
+  min-height: 120px;
+}
+
+.btn-enviar {
+  margin-top: 1rem;
+  align-self: center;
+  width: 120px;
+  background-color: #004d40;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-enviar:hover,
+.btn-enviar:focus {
+  background-color: #00796b;
+  outline: none;
+}
+
+/* Animal Grid and Cards (for Adopciones and Mascotas Perdidas) */
+.animal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.animal-card {
+  background-color: #e8f5f3;
+  color: #00695c;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.animal-card:hover,
+.animal-card:focus-within {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Imagenes de tamaño fijo para alinear textos */
+.animal-card img {
+  width: 220px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+}
+
+.animal-card h3 {
+  margin-bottom: 0.25rem;
+  font-size: 1.25rem;
+  text-transform: capitalize;
+}
+
+.animal-card h4 {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #004d40;
+}
+
+.animal-card p {
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.animal-card a {
+  text-decoration: none;
+  background-color: #004d40;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.animal-card a:hover,
+.animal-card a:focus {
+  background-color: #00796b;
+  outline: none;
+}
+
+/* Donaciones Section */
+
+/* Contenedor flex para las cajas de donaciones */
+.donaciones-container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Unificar estilo de las cajas de donaciones igual a .sobre-valores-container > div */
+.donacion-box {
+  flex: 1 1 45%;
+  background-color: #e8f5f3;
+  color: #00695c;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Títulos h3 en donacion-box con línea inferior y color igual que h2 */
+.donacion-box h3 {
+  color: #004d40;
+  font-weight: 700;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  border-bottom: 3px solid #00796b;
+  padding-bottom: 0.3rem;
+  width: 100%;
+}
+
+/* Párrafos dentro de donacion-box */
+.donacion-box p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  color: #00695c;
+  width: 100%;
+}
+
+/* Centrar la imagen QR dentro de cada caja */
+.donacion-box .qr-img {
+  align-self: center;
+  width: 250px;
+  height: 250px;
+  margin: 1rem 0;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+/* Enlaces dentro de donacion-box */
+.donacion-box a {
+  color: #004d40;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.donacion-box a:hover,
+.donacion-box a:focus {
+  color: #00796b;
+  outline: none;
+}
+
+/* Barra inferior con spans en línea y texto derechos reservados debajo */
+footer .datos-contacto {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #004d40;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  user-select: none;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.3);
+  gap: 0.3rem;
+}
+
+/* Contenedor para los spans en línea */
+footer .datos-contacto > div.spans-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+/* Cada span dentro de spans-container */
+footer .datos-contacto > div.spans-container span {
+  white-space: nowrap;
+}
+
+/* Texto derechos reservados */
+footer .datos-contacto p {
+  font-weight: 400;
+  font-size: 0.85rem;
+  color: #a5d6a7;
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding-top: 0.3rem;
+  margin-top: 0.3rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sobre-valores-container {
+    flex-direction: column;
+  }
+
+  #protectoras-asociadas .protectoras-content {
+    flex-direction: column;
+  }
+
+  #protectoras-asociadas .logos-protectoras {
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .donaciones-container {
+    flex-direction: column;
+  }
+
+  .donacion-box {
+    flex: 1 1 100%;
+  }
+
+  #contacto form > div {
+    flex-direction: column;
+  }
+
+  #contacto form > div > div:first-child,
+  #contacto form > div > div:last-child {
+    flex: 1 1 100%;
+  }
+
+  #contacto form > div > div:last-child {
+    align-items: stretch;
+  }
+
+  .btn-enviar {
+    width: 100%;
+  }
+
+  footer .datos-contacto > div.spans-container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

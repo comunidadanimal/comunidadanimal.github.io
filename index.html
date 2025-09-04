@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Comunidad Animal</title>
+  <link rel="icon" href="Imagenes/logo.jpg" type="image/png" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Menú hamburguesa -->
+  <nav>
+    <button id="menu-toggle" aria-label="Abrir menú hamburguesa" aria-expanded="false">☰</button>
+    <h1 class="nav-title">Comunidad Animal</h1>
+    <ul id="menu">
+      <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+      <li><a href="#protectoras-asociadas">Protectoras Asociadas</a></li>
+      <li><a href="#eventos">Eventos</a></li>
+      <li><a href="#contacto">Contactos</a></li>
+      <li><a href="ir-adopciones.html">Adopciones</a></li>
+      <li><a href="ir-mascotas-perdidas.html">Mascotas Perdidas</a></li>
+      <li><a href="ir-donaciones.html">Donaciones</a></li>
+    </ul>
+  </nav>
+
+  <!-- Secciones principales -->
+  <main>
+    <!-- Sobre Nosotros y Valores lado a lado -->
+    <section id="sobre-nosotros">
+      <div class="cajita sobre-valores-container">
+        <div class="sobre-nosotros">
+          <h2>Sobre Nosotros</h2>
+          <p>Somos un grupo de estudiantes del Terciario J. J. Urquiza que venimos trabajando en este proyecto desde hace más de un año. 
+            Desde el principio, nos movilizó el amor por los animales y la necesidad de mejorar las condiciones en las que viven 
+            muchos de ellos. Este proyecto nace para poner la tecnología al servicio de quienes, día a día, dedican su tiempo a rescatar, 
+            cuidar y dar en adopción a animales que lo necesitan.</p>
+        </div>
+        <div class="valores">
+          <h2>Valores</h2>
+          <p>Creemos que la calle no es un lugar para nadie. El abandono, la indiferencia y el maltrato que reciben muchos de los animales es una 
+            grave problemática, y consideramos que la única manera de darle una solución es si nos involucramos todos, no alcanza con el trabajo 
+            que hacen las protectoras. 
+            Cada uno desde el lugar que ocupe, puede aportar su ayuda y ser parte de un sistema en donde ningún animal quede sin protección. 
+            Somos un grupo de personas, que decidió asociarse y tiene como objetivo fusionar la tecnología con la lucha diaria de estas organizaciones. 
+            Creemos que erradicando esta problemática, daríamos un paso hacia adelante, construyendo una sociedad mejor.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Protectoras Asociadas -->
+    <section id="protectoras-asociadas">
+      <div class="cajita">
+        <h2>Protectoras Asociadas</h2>
+        <div class="protectoras-content">
+          <p>Garras y Bigotes comienza en el año 2018 con Marcela, su fundadora, observando constantemente gatos/as a la orilla del río que se encontraban 
+            muy lastimados y en estado de abandono, por lo que ella decidió involucrarse, sin saber previamente que también había otras personas que se 
+            preocupaban por estos animales y los asistían de la manera que podían. 
+            Es acá donde Marcela se cruza con Evelyn, una de las fundadoras de Felinos Callejeros, y ambas organizaciones, empiezan un camino de mucho compromiso 
+            por rescatar y salvar vidas. En ese momento la situación en "la barranca" (a orillas del río Paraná, cerca del club Mitre) era muy crítica, se encontraron 
+            con más de 200 gatos abandonados, que permanecían en esos lugares porque encontraban cierto "refugio" ante la indiferencia humana. Empezaron por comprar 
+            alimento e ir todos los días a darles de comer, y a los animales que veían en mal estado los llevaban a la veterinaria. Luego se empiezan a asesorar de 
+            otras protectoras y comienzan a castrar a los gatos en el IMUSA, y a buscarles hogares de tránsito. La difusión por instagram fue muy importante para sumar
+            seguidores y que la gente los acompañe haciendo aportes económicos o donando alimentos. 
+            En el transcurso de estos 6 años la gran mayoría de los gatos de "la barranca" fueron adoptados; tal es así que de más de 200 gatos abandonados en ese lugar, 
+            actualmente quedan 25. El trabajo y el compromiso de ambas organizaciones ha generado que en la actualidad reciban por Instagram casos de denuncias por maltrato 
+            animal y abandono de todos los rincones de Rosario.</p>
+          <div class="logos-protectoras">
+            <a href="Imagenes/protectora1.jpg" target="_blank" rel="noopener noreferrer">
+              <img src="Imagenes/protectora1.jpg" alt="Protectora 1" />
+            </a>
+            <a href="Imagenes/protectora2.png" target="_blank" rel="noopener noreferrer">
+              <img src="Imagenes/protectora2.jpg" alt="Protectora 2" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Eventos -->
+    <section id="eventos">
+      <div class="cajita">
+        <h2>Eventos</h2>
+        <p>Realizamos eventos para la comunidad. Aquí podrás enterarte de las fechas importantes.</p>
+        <div id="calendar"></div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto">
+      <div class="cajita">
+        <h2>Contactos</h2>
+        <form>
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <div style="flex: 1;">
+              <label for="nombre">Nombre:</label><br />
+              <input type="text" id="nombre" name="nombre" /><br />
+
+              <label for="correo">Correo Electrónico:</label><br />
+              <input type="email" id="correo" name="correo" /><br />
+
+              <label for="celular">Celular:</label><br />
+              <input type="tel" id="celular" name="celular" /><br />
+
+              <label for="opcion">Seleccionar opción:</label><br />
+              <select id="opcion" name="opcion">
+                <option value="adoptar">Adoptar</option>
+                <option value="mascota-perdida">Mascota Perdida</option>
+                <option value="donaciones">Donaciones</option>
+                <option value="eventos">Eventos</option>
+              </select>
+            </div>
+            <div style="flex: 1; display: flex; flex-direction: column;">
+              <label for="descripcion">Descripción:</label><br />
+              <textarea id="descripcion" name="descripcion" rows="8"></textarea>
+              <button type="submit" class="btn-enviar" style="align-self: center; margin-top: 1rem; width: 120px;">Enviar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer>
+    <div class="datos-contacto">
+      <div class="spans-container">
+        <span>Correo: comunidadanimal@gmail.com</span>
+        <span>Instagram: @ComunidadAnimal</span>
+        <span>Celular: 341 1111111</span>
+      </div>
+      <p>Derechos reservados de Comunidad Animal 2025.</p>
+    </div>
+  </footer>
+</body>
+</html>
